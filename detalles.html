@@ -387,95 +387,96 @@
               </script>
     
     
-       
-            <!DOCTYPE html>
-            <html lang="es">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Modal Ubicación</title>
-                <style>
-                    /* Estilos del modal */
-                    #mapModal {
-                        display: none; 
-                        position: fixed; 
-                        top: 50%; 
-                        left: 50%; 
-                        transform: translate(-50%, -50%); 
-                        width: 90%; 
-                        max-width: 400px; 
-                        background: white; 
-                        padding: 20px; 
-                        border-radius: 10px; 
-                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-                        z-index: 1000;
-                    }
-            
-                    #overlay {
-                        display: none; 
-                        position: fixed; 
-                        top: 0; 
-                        left: 0; 
-                        width: 100%; 
-                        height: 100%; 
-                        background: rgba(0, 0, 0, 0.5); 
-                        z-index: 999;
-                    }
-            
-                    button {
-                        background-color: #a67347; 
-                        color: white; 
-                        border: none; 
-                        padding: 10px; 
-                        border-radius: 5px; 
-                        cursor: pointer;
-                    }
-            
-                    span {
-                        color: #a67347; 
-                        cursor: pointer; 
-                        text-decoration: underline;
-                    }
-                </style>
-            </head>
-            <body>
-                <p>
-                    <br>Ceremonia: 21:00 hs, El Refugio Hotel & Suites,<br> 
-                    <span onclick="mostrarMapa()">
-                        J.R Binaghi 2180, Villa Angela, Chaco
-                    </span>.
-                </p>
-            
-                <!-- Modal -->
-                <div id="mapModal">
-                    <h3>Ubicación</h3>
-                    <p>J.R Binaghi 2180, Villa Angela, Chaco</p>
-                    <p>
-                        <a href="https://www.google.com/maps/place/El+Refugio+Hotel+%26+Suites./@-27.5566615,-60.7116991,64m/data=!3m1!1e3!4m9!3m8!1s0x9447077ce5c11147:0x6e77875735c43c24!5m2!4m1!1i2!8m2!3d-27.556643!4d-60.711515!16s%2Fg%2F11cjhbtzc9?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" 
-                           target="_blank" style="color: #a67347;">
-                            Ver en Google Maps
-                        </a>
-                    </p>
-                    <button onclick="cerrarMapa()">Cerrar</button>
-                </div>
-            
-                <!-- Overlay -->
-                <div id="overlay" onclick="cerrarMapa()"></div>
-            
-                <!-- Script -->
-                <script>
-                    function mostrarMapa() {
-                        document.getElementById('mapModal').style.display = 'block';
-                        document.getElementById('overlay').style.display = 'block';
-                    }
-            
-                    function cerrarMapa() {
-                        document.getElementById('mapModal').style.display = 'none';
-                        document.getElementById('overlay').style.display = 'none';
-                    }
-                </script>
-            </body>
-            </html>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modal Ubicación</title>
+        <style>
+            /* Estilos del modal */
+            #mapModal {
+                display: none; 
+                position: fixed; 
+                top: 50%; 
+                left: 50%; 
+                transform: translate(-50%, -50%) scale(0); 
+                width: 90%; 
+                max-width: 400px; 
+                background: white; 
+                padding: 20px; 
+                border-radius: 10px; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+                transition: transform 0.3s ease;
+                z-index: 1000;
+            }
+    
+            #overlay {
+                display: none; 
+                position: fixed; 
+                top: 0; 
+                left: 0; 
+                width: 100%; 
+                height: 100%; 
+                background: rgba(0, 0, 0, 0.5); 
+                z-index: 999;
+            }
+    
+            button {
+                background-color: #a67347; 
+                color: white; 
+                border: none; 
+                padding: 10px; 
+                border-radius: 5px; 
+                cursor: pointer;
+            }
+    
+            span {
+                color: #a67347; 
+                cursor: pointer; 
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <br>Ceremonia: 21:00 hs, El Refugio Hotel & Suites,<br> 
+            <span onclick="mostrarVentana()">
+                J.R Binaghi 2180, Villa Angela, Chaco
+            </span>.
+        </p>
+    
+        <!-- Modal -->
+        <div id="giftDetail" id="mapModal">
+            <h3>Ubicación</h3>
+            <p>J.R Binaghi 2180, Villa Angela, Chaco</p>
+            <p>
+                <a href="https://www.google.com/maps/place/El+Refugio+Hotel+%26+Suites./@-27.5566615,-60.7116991,64m/data=!3m1!1e3!4m9!3m8!1s0x9447077ce5c11147:0x6e77875735c43c24!5m2!4m1!1i2!8m2!3d-27.556643!4d-60.711515!16s%2Fg%2F11cjhbtzc9?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" 
+                   target="_blank" style="color: #a67347;">
+                    Ver en Google Maps
+                </a>
+            </p>
+            <button class="close-button" onclick="cerrarVentana()">Cerrar</button>
+        </div>
+    
+        <!-- Overlay -->
+        <div id="overlay" onclick="cerrarVentana()"></div>
+    
+        <!-- Script -->
+        <script>
+            function mostrarVentana() {
+                document.getElementById('giftDetail').style.transform = 'translate(-50%, -50%) scale(1)';
+                document.getElementById('overlay').style.display = 'block';
+            }
+    
+            function cerrarVentana() {
+                document.getElementById('giftDetail').style.transform = 'translate(-50%, -50%) scale(0)';
+                document.getElementById('overlay').style.display = 'none';
+            }
+        </script>
+    </body>
+    </html>
+    
             
     
     
