@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Invitación de boda de Karen y Sebas. Celebra con nosotros este momento especial.">
-<meta name="keywords" content="boda, invitación, Karen y Sebas, evento, celebración">
-
+    <meta name="keywords" content="boda, invitación, Karen y Sebas, evento, celebración">
     <title>Boda de Sebastian & Karen</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
+        /* General styles */
         body {
             margin: 0;
             padding: 0;
@@ -24,18 +24,21 @@
 
         .container {
             padding: 20px;
+            width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+            max-width: 600px; /* Limita el tamaño máximo del contenedor */
+            box-sizing: border-box;
             animation: fadeIn 1.5s ease-in-out;
         }
 
         h1 {
-            font-size: 3rem;
-            color: #a67347; /* Tono cálido del contador */
+            font-size: 2.5rem; /* Tamaño inicial de fuente */
+            color: #a67347;
             margin: 0;
         }
 
         p {
             font-size: 1.2rem;
-            color: #5c4636; /* Texto en marrón suave */
+            color: #5c4636;
         }
 
         .button {
@@ -48,7 +51,7 @@
             background-color: #a67347; /* Fondo cálido */
             padding: 10px 20px;
             border-radius: 5px;
-            font-size: 1.2rem;
+            font-size: 1rem; /* Fuente adaptativa */
             transition: background-color 0.3s ease-in-out;
         }
 
@@ -62,6 +65,35 @@
             }
             to {
                 opacity: 1;
+            }
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* Reduce tamaño para pantallas pequeñas */
+            }
+            p {
+                font-size: 1rem;
+            }
+            a {
+                font-size: 0.9rem; /* Fuente más pequeña */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+            .container {
+                padding: 10px; /* Reduce el padding para pantallas muy pequeñas */
+            }
+            a {
+                padding: 8px 16px;
+                font-size: 0.8rem;
             }
         }
     </style>

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta name="description" content="Invitación de boda de Karen y Sebas. Celebra con nosotros este momento especial.">
 <meta name="keywords" content="boda, invitación, Karen y Sebas, evento, celebración">
 
@@ -20,6 +23,8 @@
     <title>Detalles del Evento</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
+    
+
         body {
             margin: 0;
             padding: 0;
@@ -115,7 +120,7 @@
     
         .header {
             padding: 30px;
-            background-image: url('fondo flores 3.0.jpg');
+            background-image: url('fondo flores.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -176,69 +181,101 @@
             margin: 20px 0;
         }
 
-        /* Estilo del contador */
-        .countdown {
-            margin: 30px auto;
-            max-width: 600px;
-            font-family: 'Great Vibes', cursive;
-        }
+       /* Estilo general del contador */
+.countdown {
+    margin: 20px auto;
+    max-width: 600px;
+    font-family: 'Great Vibes', cursive;
+}
 
-        .date-decorator {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: #a67347;
-            margin-bottom: 20px;
-        }
+/* Estilo de la barra decorativa de fecha */
+.date-decorator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #a67347;
+    margin-bottom: 20px;
+}
 
-        .date-decorator::before,
-        .date-decorator::after {
-            content: '';
-            flex: 1;
-            border-top: 2px solid #a67347;
-            margin: 0 10px;
-        }
+.date-decorator::before,
+.date-decorator::after {
+    content: '';
+    flex: 1;
+    border-top: 2px solid #a67347;
+    margin: 0 10px;
+}
 
-        .countdown h2 {
-            font-size: 1.8rem;
-            color: #3b2f2f;
-        }
+/* Título del contador */
+.countdown h2 {
+    font-size: 1.8rem;
+    color: #3b2f2f;
+    text-align: center;
+}
 
-        .countdown-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
+/* Cuadrícula de elementos */
+.countdown-grid {
+    display: flex;
+    justify-content: space-evenly; /* Espacio balanceado horizontalmente */
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    flex-wrap: nowrap; /* Evitar que los elementos se apilen verticalmente */
+    gap: 5px; /* Espacio pequeño entre elementos */
+}
 
-        .countdown-item {
-            margin: 0 10px;
-        }
+/* Estilo de cada elemento del contador */
+.countdown-item {
+    text-align: center;
+    flex: 1; /* Hacer que todos los elementos tengan el mismo ancho */
+    max-width: 80px; /* Límite de ancho en pantallas pequeñas */
+}
 
-        .countdown-item span {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #3b2f2f;
-            text-decoration: none;
-        }
+.countdown-item span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3b2f2f;
+    text-decoration: none;
+    display: block;
+}
 
-        .divider {
-            font-size: 1.5rem;
-            color: #a67347;
-            margin: 0 20px;
-        }
+/* Divisores entre elementos */
+.divider {
+    font-size: 1.5rem;
+    color: #a67347;
+}
 
-        .divider-long {
-            width: 100%;
-            border-top: 2px solid #a67347;
-            margin: 10px 0;
-        }
+.divider-long {
+    width: 100%;
+    border-top: 2px solid #a67347;
+    margin: 10px 0;
+}
 
-        .spacer {
-            margin: 30px 0;
-        }
+/* Responsivo */
+@media (max-width: 600px) {
+    /* Asegurar alineación horizontal */
+    .countdown-grid {
+        justify-content: space-around; /* Espacio balanceado */
+        gap: 10px; /* Espacio entre elementos */
+    }
+
+    .countdown-item {
+        max-width: 60px; /* Reducir el tamaño máximo de los contadores */
+    }
+
+    .countdown-item span {
+        font-size: 1.8rem; /* Reducir tamaño del texto */
+    }
+
+    .date-decorator {
+        font-size: 1.2rem; /* Texto más pequeño para la fecha */
+    }
+
+    .countdown h2 {
+        font-size: 1.5rem; /* Ajustar título */
+    }
+}
+
 
         /* Estilos del botón "Ver más" */
         #giftDetail {
@@ -334,11 +371,11 @@
       </div>
       
     <div class="header">
-        <h1>Karen & Sebas</h1>
-        <p class="verse">“Todo lo hizo hermoso en su tiempo; y ha puesto eternidad<br>
-             en el corazón de ellos, sin que alcance el hombre a entender<br>
-              la obra que ha hecho Dios desde el principio hasta el fin.”<br>
-            Eclesiastés 3:11"
+        <h1><br>Karen & Sebas</h1>
+        <p class="verse">“Todo lo hizo hermoso en su tiempo; y ha puesto eternidad
+             en el corazón de<br> ellos, sin que alcance el hombre a entender
+              la obra<br> que ha hecho Dios desde el principio hasta el fin.”<br>
+            Eclesiastés 3:11"<br><br>
         </p>
     </div>
     
